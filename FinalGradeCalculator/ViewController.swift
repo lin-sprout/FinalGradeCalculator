@@ -45,19 +45,22 @@ class ViewController: UIViewController {
         dataCollectB = desiredGradeInputTxt.text ?? ""
         dataCollectC = examWeightTxt.text ?? ""
         
-    var currentGrade = Int(dataCollectA) ?? 0
-    var desiredGrade = Int(dataCollectB) ?? 0
-    var examWeight = Int(dataCollectC) ?? 0
-    var finalGrade = ((desiredGrade/100) - ((1 - (examWeight/100)) * currentGrade/100)) / examWeight
+    var currentGrade = Double(dataCollectA) ?? 0
+    var desiredGrade = Double(dataCollectB) ?? 0
+    var examWeight1 = Double(dataCollectC) ?? 0
+    var examWeight = examWeight1 / 100
+    var finalGrade = ((desiredGrade/100) - ((1 - (examWeight)) * currentGrade/100)) / examWeight
+    var finalFinalGrade = finalGrade * 100
+        
   //  var urGrade = finalGrade * 100
         
-        calculatedGradeResultLabel.text = "\(finalGrade)"
+        calculatedGradeResultLabel.text = "\(finalFinalGrade)"
 
         //print (urGrade)
-        print (currentGrade)
-        print (desiredGrade)
-        print (examWeight)
-        print (finalGrade)
+        //print (currentGrade)
+        //print (desiredGrade)
+        //print (examWeight1)
+        //print (finalGrade)
         
         
         // var finalGrade1 = 1 - examWeight
