@@ -56,22 +56,35 @@ class ViewController: UIViewController {
         
         calculatedGradeResultLabel.text = "\(finalFinalGrade)"
 
+        if finalFinalGrade <= 100
+        {
+            self.view.backgroundColor = UIColor.systemGreen
+        }
+        
+        if finalFinalGrade > 100
+        {
+            self.view.backgroundColor = UIColor.systemRed
+            calculatedGradeResultLabel.text = "\(finalFinalGrade)  You should ask your teacher for some Extra Credit"
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         //print (urGrade)
         //print (currentGrade)
         //print (desiredGrade)
         //print (examWeight1)
         //print (finalGrade)
-        
-        
         // var finalGrade1 = 1 - examWeight
     //var finalGrade2 = finalGrade1 * currentGrade
    // var finalGrade3 = desiredGrade - finalGrade2
     //var finalFinalGrade = finalGrade3 / examWeight
    // calculatedGradeResultLabel.text = " \(finalFinalGrade)" //(finalFinalGrade)
-        
-        
-        
-        
         //something like finalexam divided by 100 than take remainder n maybe subtract desired grade from remain n add to current grade
         //
         
