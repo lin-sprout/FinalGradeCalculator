@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var examWeightTxt: UITextField!
     
+    @IBOutlet weak var pickGradeSegmentControl: UISegmentedControl!
     
     var dataCollectA: String = ""
     var dataCollectB: String = ""
@@ -67,14 +68,6 @@ class ViewController: UIViewController {
             calculatedGradeResultLabel.text = "\(finalFinalGrade)  You should ask your teacher for some Extra Credit"
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
         //print (urGrade)
         //print (currentGrade)
         //print (desiredGrade)
@@ -88,6 +81,26 @@ class ViewController: UIViewController {
         //something like finalexam divided by 100 than take remainder n maybe subtract desired grade from remain n add to current grade
         //
         
+        
+    }
+    
+   
+    
+    @IBAction func gradePickerSegmentControl(_ sender: Any) {
+        
+        switch pickGradeSegmentControl.selectedSegmentIndex
+        {
+        
+        case 0: desiredGradeInputTxt.text = "90"
+            
+        case 1: desiredGradeInputTxt.text = "80"
+            
+        case 2: desiredGradeInputTxt.text = "70"
+            
+        case 3: desiredGradeInputTxt.text = "60"
+            
+        default: calculatedGradeResultLabel.text = "0"
+        }
         
     }
     
